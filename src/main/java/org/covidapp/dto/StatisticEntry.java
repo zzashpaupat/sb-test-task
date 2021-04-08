@@ -6,26 +6,26 @@ import java.util.List;
 public class StatisticEntry {
     // there could be more than one date with max/min cases
     private final List<LocalDate> date;
-    private final long casesCount;
+    private final long cases;
 
-    public StatisticEntry(List<LocalDate> date, long casesCount) {
+    public StatisticEntry(List<LocalDate> date, long cases) {
         this.date = date;
-        this.casesCount = casesCount;
+        this.cases = cases;
     }
 
     public List<LocalDate> getDates() {
         return date;
     }
 
-    public long getCasesCount() {
-        return casesCount;
+    public long getCases() {
+        return cases;
     }
 
     @Override
     public String toString() {
         return "StatisticEntry{" +
                 "date=" + date +
-                ", casesCount=" + casesCount +
+                ", casesCount=" + cases +
                 '}';
     }
 }

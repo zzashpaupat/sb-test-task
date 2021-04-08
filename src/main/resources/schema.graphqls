@@ -1,0 +1,17 @@
+scalar LocalDate
+type Query {
+    covidStats(countries: [String!]!,
+        startDate: LocalDate!,
+        endDate: LocalDate!): [CountryStatistic!]!
+}
+
+type CountryStatistic {
+    countrySlug: String!,
+    min: StatsEntry!,
+    max: StatsEntry!
+}
+
+type StatsEntry {
+    cases: Int!
+    dates: [LocalDate!]!
+}

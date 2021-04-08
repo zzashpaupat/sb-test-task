@@ -62,6 +62,8 @@ public class Covid19Api {
                 .uri(uriBuilder -> uriBuilder.path("/total/dayone/country/" + countrySlug + "/status/confirmed").build())
                 .retrieve()
                 .bodyToFlux(Statistic.class)
+                .retryWhen(Retry.backoff(maxRetryTimes, minBackoff)
+                .filter(Covid19Api::is5xxError))
                 .collectList()
                 .block();
         logger.info("End getting stats for {}, {} records received", countrySlug, stats.size());
