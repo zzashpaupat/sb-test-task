@@ -13,9 +13,13 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'com.graphql-java:graphql-spring-boot-starter:5.0.2'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+	implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:11.0.0'
+	runtimeOnly 'com.graphql-java-kickstart:graphiql-spring-boot-starter:11.0.0'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
