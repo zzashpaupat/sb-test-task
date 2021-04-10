@@ -15,6 +15,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springdoc:springdoc-openapi:1.5.6'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.5.6'
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
 	implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:11.0.0'

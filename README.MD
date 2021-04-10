@@ -13,3 +13,11 @@ on Windows
 ```gradlew.bat bootRun```
 
 To run project from Docker ```docker run -p 8080:8080 covid-stats-app```
+
+# API docs
+
+To view REST API after launch visit\
+http://localhost:8080/swagger-ui.html
+
+To view GraphiQL in-browser IDE visit\
+http://localhost:8080/graphiql
