@@ -3,7 +3,7 @@
 To build project on Linux/Mac ```./gradlew build ```\
 on Windows ```gradlew.bat build```
 
-#How to build Docker image
+# How to build Docker image
 ```docker build -t covid-stats-app .```
 
 # How to run
